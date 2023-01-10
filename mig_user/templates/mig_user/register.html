@@ -1,0 +1,18 @@
+<h1>Register Staff</h1>
+<form method="post" novalidate>
+  {% csrf_token %}
+  <p>{{form.username.label_tag}}</p>
+  <p>{{form.username.errors}}</p>
+  <p>{{form.username}}</p>
+  <p>{{form.email.label_tag}}</p>
+  <p>{{form.email.errors}}</p>
+  <p>{{form.email}}</p>
+  <p>{{form.password.label_tag}}</p>
+  <p>{{form.password.errors}}</p>
+  <p>{{form.password}}</p>
+  <p>{{form.is_staff.errors}}</p>
+  <p style="pointer-events: none">
+    {{form.is_staff.label_tag}}{{form.is_staff}}
+  </p>
+  <input type="submit" value="Sign up" />
+</form>

@@ -1,0 +1,17 @@
+<h1>staff</h1>
+<h2>Register a user:</h2>
+<form method="post" novalidate>
+  {% csrf_token %}
+  <p>{{form.username.label_tag}}</p>
+  <p>{{form.username.errors}}</p>
+  <p>{{form.username}}</p>
+  <p>{{form.email.label_tag}}</p>
+  <p>{{form.email.errors}}</p>
+  <p>{{form.email}}</p>
+  <p>{{form.password.label_tag}}</p>
+  <p>{{form.password.errors}}</p>
+  <p>{{form.password}}</p>
+  <input type="submit" value="Sign up" />
+</form>
+
+<a href="/user"><button>go to the user's page</button></a>
